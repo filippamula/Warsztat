@@ -26,8 +26,8 @@ namespace Warsztat
         public string PESEL { get; set; }
         public int idDane { get; set; }
     
-        public virtual dane_kontaktowe dane_kontaktowe { get; set; }
+        internal virtual dane_kontaktowe dane_kontaktowe { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<samochody> samochody { get; set; }
+        internal virtual ICollection<samochody> samochody { get; set; }
     }
 }

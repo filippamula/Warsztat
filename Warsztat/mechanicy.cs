@@ -27,8 +27,8 @@ namespace Warsztat
         public System.DateTime data_zatrudnienia { get; set; }
         public int idDane { get; set; }
     
-        public virtual dane_kontaktowe dane_kontaktowe { get; set; }
+        internal virtual dane_kontaktowe dane_kontaktowe { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<czynnosci_naprawcze> czynnosci_naprawcze { get; set; }
+        internal virtual ICollection<czynnosci_naprawcze> czynnosci_naprawcze { get; set; }
     }
 }

@@ -27,7 +27,7 @@ namespace Warsztat
         public int idSamochodu { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<czynnosci_naprawcze> czynnosci_naprawcze { get; set; }
-        public virtual samochody samochody { get; set; }
+        internal virtual ICollection<czynnosci_naprawcze> czynnosci_naprawcze { get; set; }
+        internal virtual samochody samochody { get; set; }
     }
 }

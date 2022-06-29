@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Warsztat.Tabele;
 
 namespace Warsztat
 {
@@ -25,9 +26,46 @@ namespace Warsztat
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Klienci_Click(object sender, RoutedEventArgs e)
         {
+            Klienci kl = new Klienci();
+            kl.Show();
+        }
 
+        private void Samochody_Click(object sender, RoutedEventArgs e)
+        {
+            Samochody sm = new Samochody();
+            sm.Show();
+        }
+
+        private void Naprawy_Click(object sender, RoutedEventArgs e)
+        {
+            Naprawy np = new Naprawy();
+            np.Show();
+        }
+
+        private void Czynnosci_Click(object sender, RoutedEventArgs e)
+        {
+            Czynnosci_Naprawcze cn = new Czynnosci_Naprawcze();
+            cn.Show();
+        }
+
+        private void Dane_Click(object sender, RoutedEventArgs e)
+        {
+            Dane_Kontaktowe dk = new Dane_Kontaktowe();
+            dk.Show();
+        }
+
+        private void Mechanicy_Click(object sender, RoutedEventArgs e)
+        {
+            Mechanicy mc = new Mechanicy();
+            mc.Show();
+        }
+
+        private void Cennik_Click(object sender, RoutedEventArgs e)
+        {
+            Cennik cn = new Cennik();
+            cn.Show();
         }
     }
 }

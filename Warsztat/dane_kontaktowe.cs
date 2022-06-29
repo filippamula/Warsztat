@@ -29,8 +29,8 @@ namespace Warsztat
         public string kod_pocztowy { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<klienci> klienci { get; set; }
+        internal virtual ICollection<klienci> klienci { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<mechanicy> mechanicy { get; set; }
+        internal virtual ICollection<mechanicy> mechanicy { get; set; }
     }
 }

@@ -25,6 +25,6 @@ namespace Warsztat
         public decimal cena { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<czynnosci_naprawcze> czynnosci_naprawcze { get; set; }
+        internal virtual ICollection<czynnosci_naprawcze> czynnosci_naprawcze { get; set; }
     }
 }

@@ -26,9 +26,9 @@ namespace Warsztat
         public int idNaprawy { get; set; }
         public int idCennik { get; set; }
     
-        public virtual cennik cennik { get; set; }
-        public virtual naprawy naprawy { get; set; }
+        internal virtual cennik cennik { get; set; }
+        internal virtual naprawy naprawy { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<mechanicy> mechanicy { get; set; }
+        internal virtual ICollection<mechanicy> mechanicy { get; set; }
     }
 }

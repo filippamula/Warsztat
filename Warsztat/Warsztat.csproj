@@ -76,6 +76,18 @@
     <Compile Include="klienci.cs">
       <DependentUpon>WarsztatModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Tabele\Cennik.xaml.cs">
+      <DependentUpon>Cennik.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tabele\Czynnosci_Naprawcze.xaml.cs">
+      <DependentUpon>Czynnosci_Naprawcze.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tabele\Dane_Kontaktowe.xaml.cs">
+      <DependentUpon>Dane_Kontaktowe.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tabele\Klienci.xaml.cs">
+      <DependentUpon>Klienci.xaml</DependentUpon>
+    </Compile>
     <Compile Include="mechanicy.cs">
       <DependentUpon>WarsztatModel.tt</DependentUpon>
     </Compile>
@@ -94,6 +106,15 @@
     <Compile Include="sysdiagrams.cs">
       <DependentUpon>WarsztatModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Tabele\Mechanicy.xaml.cs">
+      <DependentUpon>Mechanicy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tabele\Naprawy.xaml.cs">
+      <DependentUpon>Naprawy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tabele\Samochody.xaml.cs">
+      <DependentUpon>Samochody.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WarsztatModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -109,6 +130,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>WarsztatModel.edmx</DependentUpon>
     </Compile>
+    <Page Include="Tabele\Cennik.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Tabele\Czynnosci_Naprawcze.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Tabele\Dane_Kontaktowe.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Tabele\Klienci.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -121,6 +158,18 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Tabele\Mechanicy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Tabele\Naprawy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Tabele\Samochody.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

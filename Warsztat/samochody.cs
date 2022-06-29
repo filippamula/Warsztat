@@ -24,11 +24,12 @@ namespace Warsztat
         public string VIN { get; set; }
         public string marka { get; set; }
         public string model { get; set; }
+
         public string nr_rejestracji { get; set; }
         public int idKlienta { get; set; }
     
-        public virtual klienci klienci { get; set; }
+        internal virtual klienci klienci { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<naprawy> naprawy { get; set; }
+        internal virtual ICollection<naprawy> naprawy { get; set; }
     }
 }
