@@ -25,5 +25,21 @@ namespace Warsztat.Tabele
             InitializeComponent();
             DaneTabela.ItemsSource = db.dane_kontaktowe.ToList();
         }
+
+        private void Dodaj_Dane_Kontaktowe(object sender, RoutedEventArgs e)
+        {
+            dane_kontaktowe dane = new dane_kontaktowe()
+            {
+                nr_telefonu = nrTelTB.Text,
+                miejscowosc = MiejscowoscTB.Text,
+                ulica = UlicaTB.Text,
+                numer = NrTB.Text,
+                kod_pocztowy = KodTB.Text
+            };
+
+            db.dane_kontaktowe.Add(dane);
+            db.SaveChanges();
+            DaneTabela.ItemsSource = db.dane_kontaktowe.ToList();
+        }
     }
 }

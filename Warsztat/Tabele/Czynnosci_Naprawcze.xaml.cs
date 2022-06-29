@@ -25,5 +25,26 @@ namespace Warsztat.Tabele
             InitializeComponent();
             CzynnosciTabela.ItemsSource = db.czynnosci_naprawcze.ToList();
         }
+
+        private void Dodaj_Czynnosci(object sender, RoutedEventArgs e)
+        {
+            decimal? cenaNULLABLE;
+            if (CenaTB.Text == "")
+                cenaNULLABLE = null;
+            else
+                cenaNULLABLE = Convert.ToDecimal(CenaTB.Text);
+
+            czynnosci_naprawcze czynnosci = new czynnosci_naprawcze()
+            {
+                cena = cenaNULLABLE,
+                opis = OpisTB.Text,
+                idNaprawy = Convert.ToInt32(idNaprawyTB.Text),
+                idCennik = Convert.ToInt32(idCennikTB.Text)
+            };
+
+            db.czynnosci_naprawcze.Add(czynnosci);
+            db.SaveChanges();
+            CzynnosciTabela.ItemsSource = db.czynnosci_naprawcze.ToList();
+        }
     }
 }

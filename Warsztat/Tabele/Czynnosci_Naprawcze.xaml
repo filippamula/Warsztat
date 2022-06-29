@@ -7,6 +7,33 @@
         mc:Ignorable="d"
         Title="Czynnosci_Naprawcze" Height="450" Width="800">
     <Grid>
-        <DataGrid x:Name="CzynnosciTabela"/>
+
+        <DataGrid x:Name="CzynnosciTabela" Width="750" Height="300" VerticalAlignment="Top" Margin="20"/>
+
+        <StackPanel Margin="25,325,625,10">
+            <TextBlock TextWrapping="Wrap" Text="Cena" FontSize="15" Height="20" Width="50"/>
+            <TextBox x:Name="CenaTB" TextWrapping="Wrap" Width="130" Height="30" VerticalContentAlignment="Center" FontSize="20"/>
+        </StackPanel>
+
+        <StackPanel Margin="175,325,475,0">
+            <TextBlock TextWrapping="Wrap" Text="Opis" FontSize="15" Height="20" Width="35"/>
+            <TextBox x:Name="OpisTB" TextWrapping="Wrap" Width="130" Height="60"  VerticalContentAlignment="Center" FontSize="20"/>
+        </StackPanel>
+
+        <StackPanel Margin="325,325,375,10">
+            <TextBlock TextWrapping="Wrap" Text="ID Naprawy" FontSize="15" Height="20" Width="81"/>
+            <TextBox x:Name="idNaprawyTB" TextWrapping="Wrap" Width="80" Height="30" VerticalContentAlignment="Center" FontSize="20"/>
+        </StackPanel>
+
+        <StackPanel Margin="425,325,275,10">
+            <TextBlock TextWrapping="Wrap" Text="ID Cennik" FontSize="15" Height="20" Width="81"/>
+            <TextBox x:Name="idCennikTB" TextWrapping="Wrap" Width="80" Height="30" VerticalContentAlignment="Center" FontSize="20"/>
+        </StackPanel>
+
+        <StackPanel Margin="530,345,197,10">
+            <Button Content="Dodaj" Height="30" Click="Dodaj_Czynnosci"/>
+
+        </StackPanel>
+
     </Grid>
 </Window>
