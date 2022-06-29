@@ -7,6 +7,37 @@
         mc:Ignorable="d"
         Title="Mechanicy" Height="450" Width="800">
     <Grid>
-        <DataGrid x:Name="MechanicyTabela"/>
+
+        <DataGrid x:Name="MechanicyTabela" Width="750" Height="300" VerticalAlignment="Top" Margin="20"/>
+
+        <StackPanel Margin="25,325,625,10">
+            <TextBlock TextWrapping="Wrap" Text="Imie" FontSize="15" Height="20" Width="31"/>
+            <TextBox x:Name="ImieTB" TextWrapping="Wrap" Width="130" Height="30" VerticalContentAlignment="Center" FontSize="20"/>
+        </StackPanel>
+
+        <StackPanel Margin="175,325,475,10">
+            <TextBlock TextWrapping="Wrap" Text="Nazwisko" FontSize="15" Height="20" Width="65"/>
+            <TextBox x:Name="NazwiskoTB" TextWrapping="Wrap" Width="130" Height="30"  VerticalContentAlignment="Center" FontSize="20"/>
+        </StackPanel>
+
+        <StackPanel Margin="325,325,335,10">
+            <TextBlock TextWrapping="Wrap" Text="PESEL" FontSize="15" Height="20" Width="41"/>
+            <TextBox x:Name="PeselTB" TextWrapping="Wrap" Width="120" Height="30"  VerticalContentAlignment="Center" FontSize="16"/>
+        </StackPanel>
+
+        <StackPanel Margin="465,325,215,10">
+            <TextBlock TextWrapping="Wrap" Text="ID Dane Kontaktowe" FontSize="13" Height="39" Width="74"/>
+            <TextBox x:Name="ID_DaneKTB" TextWrapping="Wrap" Width="100" Height="30"  VerticalContentAlignment="Center" FontSize="20"/>
+        </StackPanel>
+
+        <StackPanel Margin="585,325,95,10">
+            <TextBlock TextWrapping="Wrap" Text="Data Zatrudnienia" FontSize="13" Height="39" Width="74"/>
+            <DatePicker x:Name="DataTB" Width="100" Height="30"  VerticalContentAlignment="Center" FontSize="11"/>
+        </StackPanel>
+
+        <StackPanel Margin="717,345,10,10">
+            <Button Content="Dodaj" Height="30" Click="Dodaj_Mechanicy"/>
+
+        </StackPanel>
     </Grid>
 </Window>

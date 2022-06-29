@@ -25,5 +25,21 @@ namespace Warsztat.Tabele
             InitializeComponent();
             MechanicyTabela.ItemsSource = db.mechanicy.ToList();
         }
+
+        private void Dodaj_Mechanicy(object sender, RoutedEventArgs e)
+        {
+            mechanicy mechanicy = new mechanicy()
+            {
+                imie = ImieTB.Text,
+                nazwisko = NazwiskoTB.Text,
+                PESEL = PeselTB.Text,
+                data_zatrudnienia = Convert.ToDateTime(DataTB.Text),
+                idDane = Convert.ToInt32(ID_DaneKTB.Text)
+            };
+
+            db.mechanicy.Add(mechanicy);
+            db.SaveChanges();
+            MechanicyTabela.ItemsSource = db.mechanicy.ToList();
+        }
     }
 }

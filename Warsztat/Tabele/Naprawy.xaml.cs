@@ -25,5 +25,28 @@ namespace Warsztat.Tabele
             InitializeComponent();
             NaprawyTabela.ItemsSource = db.naprawy.ToList();
         }
+
+        private void Dodaj_Naprawy(object sender, RoutedEventArgs e)
+        {
+
+            DateTime? dataWy;
+
+            if (DataWTB.Text == "")
+                dataWy = null;
+            else
+                dataWy = Convert.ToDateTime(DataWTB.Text);
+
+            naprawy naprawy = new naprawy()
+            {
+                data_przyjecia = Convert.ToDateTime(DataPTB.Text),
+                termin = Convert.ToDateTime(TerminTB.Text),
+                data_wydania = dataWy,
+                idSamochodu = Convert.ToInt32(ID_SamochoduTB.Text)
+            };
+
+            db.naprawy.Add(naprawy);
+            db.SaveChanges();
+            NaprawyTabela.ItemsSource = db.naprawy.ToList();
+        }
     }
 }
