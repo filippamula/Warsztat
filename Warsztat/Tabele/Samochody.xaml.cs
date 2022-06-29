@@ -25,5 +25,21 @@ namespace Warsztat.Tabele
             InitializeComponent();
             SamochodyTabela.ItemsSource = db.samochody.ToList();
         }
+
+        private void Dodaj_Samochody(object sender, RoutedEventArgs e)
+        {
+            samochody samochody = new samochody()
+            {
+                VIN = VinTB.Text,
+                marka = MarkaTB.Text,
+                model = ModelTB.Text,
+                nr_rejestracji = NRrTB.Text,
+                idKlienta = Convert.ToInt32(IDklientaTB.Text)
+            };
+
+            db.samochody.Add(samochody);
+            db.SaveChanges();
+            SamochodyTabela.ItemsSource = db.samochody.ToList();
+        }
     }
 }
