@@ -25,5 +25,20 @@ namespace Warsztat.Tabele
             InitializeComponent();
             CennikTabela.ItemsSource = db.cennik.ToList();
         }
+
+        private void Dodaj_Cennik(object sender, RoutedEventArgs e)
+        {
+            cennik cennik = new cennik()
+            {
+                nazwa = NazwaTB.Text,
+                cena = Convert.ToDecimal(CenaTB.Text)
+            };
+
+            db.cennik.Add(cennik);
+            db.SaveChanges();
+            CennikTabela.ItemsSource = db.cennik.ToList();
+        }
+
+
     }
 }
