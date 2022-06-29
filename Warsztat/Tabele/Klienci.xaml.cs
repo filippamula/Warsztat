@@ -25,5 +25,20 @@ namespace Warsztat
             InitializeComponent();
             KlienciTabela.ItemsSource = db.klienci.ToList();
         }
+
+        private void Dodaj_Klienci(object sender, RoutedEventArgs e)
+        {
+            klienci klienci = new klienci()
+            {
+                imie = ImieTB.Text,
+                nazwisko = NazwiskoTB.Text,
+                PESEL = PeselTB.Text,
+                idDane = Convert.ToInt32(ID_DaneKTB.Text)
+            };
+
+            db.klienci.Add(klienci);
+            db.SaveChanges();
+            KlienciTabela.ItemsSource = db.klienci.ToList();
+        }
     }
 }
