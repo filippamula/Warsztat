@@ -29,9 +29,10 @@
             <TextBlock TextWrapping="Wrap" Text="ID Cennik" FontSize="15" Height="20" Width="81"/>
             <TextBox x:Name="idCennikTB" TextWrapping="Wrap" Width="80" Height="30" VerticalContentAlignment="Center" FontSize="20"/>
         </StackPanel>
-
-        <StackPanel Margin="530,345,197,10">
+        
+        <StackPanel Margin="717,335,10,10">
             <Button Content="Dodaj" Height="30" Click="Dodaj_Czynnosci"/>
+            <Button Content="Usuń" Height="30" Click="Usun_Czynnosci" Margin="0,5,0,0"/>
 
         </StackPanel>
 
