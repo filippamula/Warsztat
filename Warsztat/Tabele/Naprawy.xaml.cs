@@ -26,6 +26,11 @@ namespace Warsztat.Tabele
             NaprawyTabela.ItemsSource = db.naprawy.ToList();
         }
 
+        public void Odswiez()
+        {
+            NaprawyTabela.ItemsSource = db.naprawy.ToList();
+        }
+
         private void Dodaj_Naprawy(object sender, RoutedEventArgs e)
         {
 
@@ -46,7 +51,15 @@ namespace Warsztat.Tabele
 
             db.naprawy.Add(naprawy);
             db.SaveChanges();
-            NaprawyTabela.ItemsSource = db.naprawy.ToList();
+            Odswiez();
+        }
+
+        private void Usun_Naprawy(object sender, RoutedEventArgs e)
+        {
+            var selected = NaprawyTabela.SelectedItem as naprawy;
+            db.naprawy.Remove(selected);
+            db.SaveChanges();
+            Odswiez();
         }
     }
 }

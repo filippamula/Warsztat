@@ -30,8 +30,9 @@
             <TextBox x:Name="ID_SamochoduTB" TextWrapping="Wrap" Width="100" Height="30"  VerticalContentAlignment="Center" FontSize="20"/>
         </StackPanel>
 
-        <StackPanel Margin="600,345,127,10">
+        <StackPanel Margin="717,335,10,10">
             <Button Content="Dodaj" Height="30" Click="Dodaj_Naprawy"/>
+            <Button Content="Usuń" Height="30" Click="Usun_Naprawy" Margin="0,5,0,0"/>
 
         </StackPanel>
 
