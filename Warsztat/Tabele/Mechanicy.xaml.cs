@@ -26,6 +26,11 @@ namespace Warsztat.Tabele
             MechanicyTabela.ItemsSource = db.mechanicy.ToList();
         }
 
+        public void Odswiez()
+        {
+            MechanicyTabela.ItemsSource = db.mechanicy.ToList();
+        }
+
         private void Dodaj_Mechanicy(object sender, RoutedEventArgs e)
         {
             mechanicy mechanicy = new mechanicy()
@@ -39,7 +44,15 @@ namespace Warsztat.Tabele
 
             db.mechanicy.Add(mechanicy);
             db.SaveChanges();
-            MechanicyTabela.ItemsSource = db.mechanicy.ToList();
+            Odswiez();
+        }
+
+        private void Usun_Mechanicy(object sender, RoutedEventArgs e)
+        {
+            var selected = MechanicyTabela.SelectedItem as mechanicy;
+            db.mechanicy.Remove(selected);
+            db.SaveChanges();
+            Odswiez();
         }
     }
 }
