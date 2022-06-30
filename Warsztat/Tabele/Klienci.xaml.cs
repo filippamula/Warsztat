@@ -26,6 +26,11 @@ namespace Warsztat
             KlienciTabela.ItemsSource = db.klienci.ToList();
         }
 
+        public void Odswiez()
+        {
+            KlienciTabela.ItemsSource = db.klienci.ToList();
+        }
+
         private void Dodaj_Klienci(object sender, RoutedEventArgs e)
         {
             klienci klienci = new klienci()
@@ -38,7 +43,15 @@ namespace Warsztat
 
             db.klienci.Add(klienci);
             db.SaveChanges();
-            KlienciTabela.ItemsSource = db.klienci.ToList();
+            Odswiez();
+        }
+
+        private void Usun_Klienci(object sender, RoutedEventArgs e)
+        {
+            var selected = KlienciTabela.SelectedItem as klienci;
+            db.klienci.Remove(selected);
+            db.SaveChanges();
+            Odswiez();
         }
     }
 }

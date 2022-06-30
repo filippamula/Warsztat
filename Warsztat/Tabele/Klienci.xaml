@@ -30,8 +30,9 @@
             <TextBox x:Name="ID_DaneKTB" TextWrapping="Wrap" Width="100" Height="30"  VerticalContentAlignment="Center" FontSize="20"/>
         </StackPanel>
 
-        <StackPanel Margin="633,345,94,10">
+        <StackPanel Margin="717,335,10,10">
             <Button Content="Dodaj" Height="30" Click="Dodaj_Klienci"/>
+            <Button Content="Usuń" Height="30" Click="Usun_Klienci" Margin="0,5,0,0"/>
 
         </StackPanel>
 

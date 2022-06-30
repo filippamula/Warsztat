@@ -26,7 +26,7 @@ namespace Warsztat.Tabele
             DaneTabela.ItemsSource = db.dane_kontaktowe.ToList();
         }
 
-        public void Odswier()
+        public void Odswiez()
         {
             DaneTabela.ItemsSource = db.dane_kontaktowe.ToList();
         }
@@ -44,7 +44,7 @@ namespace Warsztat.Tabele
 
             db.dane_kontaktowe.Add(dane);
             db.SaveChanges();
-            Odswier();
+            Odswiez();
         }
 
         private void Usun_Dane_Kontaktowe(object sender, RoutedEventArgs e)
@@ -52,7 +52,7 @@ namespace Warsztat.Tabele
             var selected = DaneTabela.SelectedItem as dane_kontaktowe;
             db.dane_kontaktowe.Remove(selected);
             db.SaveChanges();
-            Odswier();
+            Odswiez();
         }
     }
 }
