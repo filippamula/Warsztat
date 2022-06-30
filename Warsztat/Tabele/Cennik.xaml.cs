@@ -39,6 +39,12 @@ namespace Warsztat.Tabele
             CennikTabela.ItemsSource = db.cennik.ToList();
         }
 
-
+        private void Usun_Cennik(object sender, RoutedEventArgs e)
+        {
+            var selected = CennikTabela.SelectedItem as cennik;
+            db.cennik.Remove(selected);
+            db.SaveChanges();
+            CennikTabela.ItemsSource = db.cennik.ToList();
+        }
     }
 }
