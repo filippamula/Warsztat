@@ -26,6 +26,11 @@ namespace Warsztat.Tabele
             CennikTabela.ItemsSource = db.cennik.ToList();
         }
 
+        public void Odswiez()
+        {
+            CennikTabela.ItemsSource = db.cennik.ToList();
+        }
+
         private void Dodaj_Cennik(object sender, RoutedEventArgs e)
         {
             cennik cennik = new cennik()
@@ -36,7 +41,7 @@ namespace Warsztat.Tabele
 
             db.cennik.Add(cennik);
             db.SaveChanges();
-            CennikTabela.ItemsSource = db.cennik.ToList();
+            Odswiez();
         }
 
         private void Usun_Cennik(object sender, RoutedEventArgs e)
@@ -44,7 +49,7 @@ namespace Warsztat.Tabele
             var selected = CennikTabela.SelectedItem as cennik;
             db.cennik.Remove(selected);
             db.SaveChanges();
-            CennikTabela.ItemsSource = db.cennik.ToList();
+            Odswiez();
         }
     }
 }

@@ -26,6 +26,11 @@ namespace Warsztat.Tabele
             CzynnosciTabela.ItemsSource = db.czynnosci_naprawcze.ToList();
         }
 
+        public void Odswiez()
+        {
+            CzynnosciTabela.ItemsSource = db.czynnosci_naprawcze.ToList();
+        }
+
         private void Dodaj_Czynnosci(object sender, RoutedEventArgs e)
         {
             decimal? cenaNULLABLE;
@@ -44,7 +49,7 @@ namespace Warsztat.Tabele
 
             db.czynnosci_naprawcze.Add(czynnosci);
             db.SaveChanges();
-            CzynnosciTabela.ItemsSource = db.czynnosci_naprawcze.ToList();
+            Odswiez();
         }
 
         private void Usun_Czynnosci(object sender, RoutedEventArgs e)
@@ -52,7 +57,7 @@ namespace Warsztat.Tabele
             var selected = CzynnosciTabela.SelectedItem as czynnosci_naprawcze;
             db.czynnosci_naprawcze.Remove(selected);
             db.SaveChanges();
-            CzynnosciTabela.ItemsSource = db.cennik.ToList();
+            Odswiez();
         }
     }
 }
