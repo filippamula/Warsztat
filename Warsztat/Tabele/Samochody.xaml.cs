@@ -26,6 +26,11 @@ namespace Warsztat.Tabele
             SamochodyTabela.ItemsSource = db.samochody.ToList();
         }
 
+        public void Odswiez()
+        {
+            SamochodyTabela.ItemsSource = db.samochody.ToList();
+        }
+
         private void Dodaj_Samochody(object sender, RoutedEventArgs e)
         {
             samochody samochody = new samochody()
@@ -39,7 +44,15 @@ namespace Warsztat.Tabele
 
             db.samochody.Add(samochody);
             db.SaveChanges();
-            SamochodyTabela.ItemsSource = db.samochody.ToList();
+            Odswiez();
+        }
+
+        private void Usun_Samochody(object sender, RoutedEventArgs e)
+        {
+            var selected = SamochodyTabela.SelectedItem as samochody;
+            db.samochody.Remove(selected);
+            db.SaveChanges();
+            Odswiez();
         }
     }
 }
