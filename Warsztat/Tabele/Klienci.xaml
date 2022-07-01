@@ -9,7 +9,7 @@
         Title="Klienci" Height="450" Width="800">
     <Grid>
 
-        <DataGrid x:Name="KlienciTabela" Width="750" Height="300" VerticalAlignment="Top" Margin="0,20,0,0"/>
+        <DataGrid x:Name="KlienciTabela" IsReadOnly="True" Width="750" Height="300" VerticalAlignment="Top" Margin="0,20,0,0"/>
 
         <StackPanel Margin="25,325,625,10">
             <TextBlock TextWrapping="Wrap" Text="Imie" FontSize="15" Height="20" Width="31"/>

@@ -54,5 +54,14 @@ namespace Warsztat.Tabele
             db.SaveChanges();
             Odswiez();
         }
+
+        private void Edytuj_Mechanicy(object sender, RoutedEventArgs e)
+        {
+            var selected = MechanicyTabela.SelectedItem as mechanicy;
+            db.mechanicy.Remove(selected);
+            Dodaj_Mechanicy(sender, e);
+            db.SaveChanges();
+            Odswiez();
+        }
     }
 }
