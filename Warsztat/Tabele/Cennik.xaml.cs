@@ -34,6 +34,12 @@ namespace Warsztat.Tabele
 
         private void Dodaj_Cennik(object sender, RoutedEventArgs e)
         {
+            if (NazwaTB.Text == "" || CenaTB.Text == "")
+            {
+                MessageBox.Show("Uzupełnij wszystkie pola tekstowe", "Błąd");
+                return;
+            }
+
             cennik cennik = new cennik()
             {
                 nazwa = NazwaTB.Text,
@@ -48,6 +54,19 @@ namespace Warsztat.Tabele
         private void Usun_Cennik(object sender, RoutedEventArgs e)
         {
             var selected = CennikTabela.SelectedItem as cennik;
+
+            if(NazwaTB.Text == "" || CenaTB.Text == "")
+            {
+                MessageBox.Show("Uzupełnij wszystkie pola tekstowe", "Błąd");
+                return;
+            }
+
+            if (selected is null)
+            {
+                MessageBox.Show("Zaznacz wiersz", "Błąd");
+                return;
+            }
+
             db.cennik.Remove(selected);
             db.SaveChanges();
             Odswiez();
@@ -56,7 +75,13 @@ namespace Warsztat.Tabele
         private void Edytuj_Cennik(object sender, RoutedEventArgs e)
         {
             var selected = CennikTabela.SelectedItem as cennik;
-            
+
+            if (selected is null)
+            {
+                MessageBox.Show("Zaznacz wiersz", "Błąd");
+                return;
+            }
+
             selected.nazwa = NazwaTB.Text;
             selected.cena = Convert.ToDecimal(CenaTB.Text);
 
