@@ -58,8 +58,13 @@ namespace Warsztat.Tabele
         private void Edytuj_Dane_Kontaktowe(object sender, RoutedEventArgs e)
         {
             var selected = DaneTabela.SelectedItem as dane_kontaktowe;
-            db.dane_kontaktowe.Remove(selected);
-            Dodaj_Dane_Kontaktowe(sender, e);
+
+            selected.nr_telefonu = nrTelTB.Text;
+            selected.miejscowosc = MiejscowoscTB.Text;
+            selected.ulica = UlicaTB.Text;
+            selected.numer = NrTB.Text;
+            selected.kod_pocztowy = KodTB.Text;
+
             db.SaveChanges();
             Odswiez();
         }
