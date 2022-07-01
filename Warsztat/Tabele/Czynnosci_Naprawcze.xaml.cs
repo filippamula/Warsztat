@@ -63,8 +63,19 @@ namespace Warsztat.Tabele
         private void Edytuj_Czynnosci(object sender, RoutedEventArgs e)
         {
             var selected = CzynnosciTabela.SelectedItem as czynnosci_naprawcze;
-            db.czynnosci_naprawcze.Remove(selected);
-            Dodaj_Czynnosci(sender, e);
+
+            decimal? cenaNULLABLE;
+            if (CenaTB.Text == "")
+                cenaNULLABLE = null;
+            else
+                cenaNULLABLE = Convert.ToDecimal(CenaTB.Text);
+
+            selected.cena = cenaNULLABLE;
+            selected.opis = OpisTB.Text;
+            selected.idNaprawy = Convert.ToInt32(idNaprawyTB.Text);
+            selected.idCennik = Convert.ToInt32(idCennikTB.Text);
+
+
             db.SaveChanges();
             Odswiez();
         }
