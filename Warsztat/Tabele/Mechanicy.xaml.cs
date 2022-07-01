@@ -58,8 +58,13 @@ namespace Warsztat.Tabele
         private void Edytuj_Mechanicy(object sender, RoutedEventArgs e)
         {
             var selected = MechanicyTabela.SelectedItem as mechanicy;
-            db.mechanicy.Remove(selected);
-            Dodaj_Mechanicy(sender, e);
+
+            selected.imie = ImieTB.Text;
+            selected.nazwisko = NazwiskoTB.Text;
+            selected.PESEL = PeselTB.Text;
+            selected.data_zatrudnienia = Convert.ToDateTime(DataTB.Text);
+            selected.idDane = Convert.ToInt32(ID_DaneKTB.Text);
+
             db.SaveChanges();
             Odswiez();
         }
