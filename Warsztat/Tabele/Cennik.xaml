@@ -6,9 +6,10 @@
         xmlns:local="clr-namespace:Warsztat.Tabele"
         mc:Ignorable="d"
         ResizeMode="NoResize"
-        Title="Cennik" Height="450" Width="800">
+        
+        Title="Cennik" Height="450" Width="800" Background="Azure">
     <Grid>
-        <DataGrid x:Name="CennikTabela" IsReadOnly="True" Width="750" Height="300" VerticalAlignment="Top" Margin="0,20,0,0"/>
+        <DataGrid x:Name="CennikTabela" IsReadOnly="True" Width="750" Height="300" VerticalAlignment="Top" Margin="0,20,0,0" AlternatingRowBackground="#b8caf2" RowBackground="Azure"/>
         
         <StackPanel Margin="25,325,475,10">
             <TextBlock TextWrapping="Wrap" Text="Nazwa" FontSize="15" Height="20" Width="50"/>

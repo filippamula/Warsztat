@@ -6,10 +6,10 @@
         xmlns:local="clr-namespace:Warsztat.Tabele"
         mc:Ignorable="d"
         ResizeMode="NoResize"
-        Title="Dane_Kontaktowe" Height="450" Width="800">
+        Title="Dane_Kontaktowe" Height="450" Width="800"  Background="Azure">
     <Grid>
 
-        <DataGrid x:Name="DaneTabela" IsReadOnly="True" Width="750" Height="300" VerticalAlignment="Top" Margin="20"/>
+        <DataGrid x:Name="DaneTabela" IsReadOnly="True" Width="750" Height="300" VerticalAlignment="Top" Margin="0,20,0,0" AlternatingRowBackground="#b8caf2" RowBackground="Azure"/>
 
         <StackPanel Margin="25,325,645,10">
             <TextBlock TextWrapping="Wrap" Text="Nr Telefonu" FontSize="15" Height="20" Width="83"/>
