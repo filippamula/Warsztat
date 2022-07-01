@@ -31,6 +31,7 @@ namespace Warsztat.Tabele
             CennikTabela.ItemsSource = db.cennik.ToList();
         }
 
+
         private void Dodaj_Cennik(object sender, RoutedEventArgs e)
         {
             cennik cennik = new cennik()
@@ -55,8 +56,10 @@ namespace Warsztat.Tabele
         private void Edytuj_Cennik(object sender, RoutedEventArgs e)
         {
             var selected = CennikTabela.SelectedItem as cennik;
-            db.cennik.Remove(selected);
-            Dodaj_Cennik(sender, e);
+            
+            selected.nazwa = NazwaTB.Text;
+            selected.cena = Convert.ToDecimal(CenaTB.Text);
+
             db.SaveChanges();
             Odswiez();
         }

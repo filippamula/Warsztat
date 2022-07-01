@@ -8,7 +8,7 @@
         ResizeMode="NoResize"
         Title="Cennik" Height="450" Width="800">
     <Grid>
-        <DataGrid IsReadOnly="True" x:Name="CennikTabela" Width="750" Height="300" VerticalAlignment="Top" Margin="0,20,0,0"/>
+        <DataGrid x:Name="CennikTabela" IsReadOnly="True" Width="750" Height="300" VerticalAlignment="Top" Margin="0,20,0,0"/>
         
         <StackPanel Margin="25,325,475,10">
             <TextBlock TextWrapping="Wrap" Text="Nazwa" FontSize="15" Height="20" Width="50"/>
