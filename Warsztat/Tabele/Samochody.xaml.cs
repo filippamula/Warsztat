@@ -54,5 +54,14 @@ namespace Warsztat.Tabele
             db.SaveChanges();
             Odswiez();
         }
+
+        private void Edytuj_Samochody(object sender, RoutedEventArgs e)
+        {
+            var selected = SamochodyTabela.SelectedItem as samochody;
+            db.samochody.Remove(selected);
+            Dodaj_Samochody(sender, e);
+            db.SaveChanges();
+            Odswiez();
+        }
     }
 }
