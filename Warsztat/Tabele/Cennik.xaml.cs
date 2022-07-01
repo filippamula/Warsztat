@@ -51,5 +51,14 @@ namespace Warsztat.Tabele
             db.SaveChanges();
             Odswiez();
         }
+
+        private void Zapisz_Cennik(object sender, RoutedEventArgs e)
+        {
+            var selected = CennikTabela.SelectedItem as cennik;
+            db.cennik.Remove(selected);
+            Dodaj_Cennik(sender, e);
+            db.SaveChanges();
+            Odswiez();
+        }
     }
 }
