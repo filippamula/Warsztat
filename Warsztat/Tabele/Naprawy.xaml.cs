@@ -65,8 +65,19 @@ namespace Warsztat.Tabele
         private void Edytuj_Naprawy(object sender, RoutedEventArgs e)
         {
             var selected = NaprawyTabela.SelectedItem as naprawy;
-            db.naprawy.Remove(selected);
-            Dodaj_Naprawy(sender, e);
+
+            DateTime? dataWy;
+
+            if (DataWTB.Text == "")
+                dataWy = null;
+            else
+                dataWy = Convert.ToDateTime(DataWTB.Text);
+
+            selected.data_przyjecia = Convert.ToDateTime(DataPTB.Text);
+            selected.termin = Convert.ToDateTime(TerminTB.Text);
+            selected.data_wydania = dataWy;
+            selected.idSamochodu = Convert.ToInt32(ID_SamochoduTB.Text);
+
             db.SaveChanges();
             Odswiez();
         }
