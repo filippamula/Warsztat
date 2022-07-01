@@ -57,8 +57,12 @@ namespace Warsztat
         private void Edytuj_Klienci(object sender, RoutedEventArgs e)
         {
             var selected = KlienciTabela.SelectedItem as klienci;
-            db.klienci.Remove(selected);
-            Dodaj_Klienci(sender, e);
+
+            selected.imie = ImieTB.Text;
+            selected.nazwisko = NazwiskoTB.Text;
+            selected.PESEL = PeselTB.Text;
+            selected.idDane = Convert.ToInt32(ID_DaneKTB.Text);
+
             db.SaveChanges();
             Odswiez();
         }
