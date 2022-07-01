@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         ResizeMode="NoResize"
         
-        Title="Cennik" Height="450" Width="800" Background="Azure">
+        Title="Cennik" Height="450" Width="800" Background="Azure" >
     <Grid>
         <DataGrid x:Name="CennikTabela" IsReadOnly="True" Width="750" Height="300" VerticalAlignment="Top" Margin="0,20,0,0" AlternatingRowBackground="#b8caf2" RowBackground="Azure"/>
         
@@ -22,9 +22,9 @@
         </StackPanel>
 
         <StackPanel Margin="717,335,10,0">
-            <Button Content="Dodaj" Height="20" Click="Dodaj_Cennik"/>
-            <Button Content="Usuń" Height="20" Click="Usun_Cennik" Margin="0,5,0,0"/>
-            <Button Content="Edytuj" Height="20" Click="Edytuj_Cennik" Margin="0,5,0,0"/>
+            <Button Style="{DynamicResource ButtonStyle}" Content="Dodaj" Height="20" Click="Dodaj_Cennik"/>
+            <Button Style="{DynamicResource ButtonStyle}" Content="Usuń" Height="20" Click="Usun_Cennik" Margin="0,5,0,0"/>
+            <Button Style="{DynamicResource ButtonStyle}" Content="Edytuj" Height="20" Click="Edytuj_Cennik" Margin="0,5,0,0"/>
 
         </StackPanel>
         

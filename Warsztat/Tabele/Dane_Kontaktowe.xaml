@@ -37,9 +37,9 @@
         </StackPanel>
 
         <StackPanel Margin="717,335,10,0">
-            <Button Content="Dodaj" Height="20" Click="Dodaj_Dane_Kontaktowe"/>
-            <Button Content="Usuń" Height="20" Click="Usun_Dane_Kontaktowe" Margin="0,5,0,0"/>
-            <Button Content="Edytuj" Height="20" Click="Edytuj_Dane_Kontaktowe" Margin="0,5,0,0"/>
+            <Button Style="{DynamicResource ButtonStyle}" Content="Dodaj" Height="20" Click="Dodaj_Dane_Kontaktowe"/>
+            <Button Style="{DynamicResource ButtonStyle}" Content="Usuń" Height="20" Click="Usun_Dane_Kontaktowe" Margin="0,5,0,0"/>
+            <Button Style="{DynamicResource ButtonStyle}" Content="Edytuj" Height="20" Click="Edytuj_Dane_Kontaktowe" Margin="0,5,0,0"/>
 
         </StackPanel>
 

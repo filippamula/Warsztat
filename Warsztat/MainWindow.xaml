@@ -10,14 +10,14 @@
 
     <Grid Margin="0,120,0,0">
         <TextBlock TextWrapping="Wrap" Text="Warsztat" TextAlignment="Center" FontSize="40" VerticalAlignment="Top" Margin="100,-96,100,0" Grid.Column="1" Grid.ColumnSpan="2"/>
-        
-        <Button Content="Klienci" Width="150" Height="70"  Grid.Column="0" Click="Klienci_Click"/>
-        <Button Content="Samochody" Width="150" Height="70" Grid.Column="1" Click="Samochody_Click"/>
-        <Button Content="Naprawy" Width="150" Height="70" Grid.Column="2" Click="Naprawy_Click"/>
-        <Button Content="Czynności Naprawcze" Width="150" Height="70" Grid.Column="3" Click="Czynnosci_Click"/>
-        <Button Content="Dane Kontaktowe" Width="150" Height="70" Grid.Row="1" Click="Dane_Click"/>
-        <Button Content="Mechanicy" Width="150" Height="70" Grid.Row="1" Grid.Column="1" Click="Mechanicy_Click"/>
-        <Button Content="Cennik" Width="150" Height="70" Grid.Row="1" Grid.Column="2" Click="Cennik_Click"/>
+
+        <Button Style="{DynamicResource ButtonStyle}" FontSize="13" Content="Klienci" Width="150" Height="70"  Grid.Column="0" Click="Klienci_Click"/>
+        <Button Style="{DynamicResource ButtonStyle}" FontSize="13" Content="Samochody" Width="150" Height="70" Grid.Column="1" Click="Samochody_Click"/>
+        <Button Style="{DynamicResource ButtonStyle}" FontSize="13" Content="Naprawy" Width="150" Height="70" Grid.Column="2" Click="Naprawy_Click"/>
+        <Button Style="{DynamicResource ButtonStyle}" FontSize="13" Content="Czynności Naprawcze" Width="150" Height="70" Grid.Column="3" Click="Czynnosci_Click"/>
+        <Button Style="{DynamicResource ButtonStyle}" FontSize="13" Content="Dane Kontaktowe" Width="150" Height="70" Grid.Row="1" Click="Dane_Click"/>
+        <Button Style="{DynamicResource ButtonStyle}" FontSize="13" Content="Mechanicy" Width="150" Height="70" Grid.Row="1" Grid.Column="1" Click="Mechanicy_Click"/>
+        <Button Style="{DynamicResource ButtonStyle}" FontSize="13" Content="Cennik" Width="150" Height="70" Grid.Row="1" Grid.Column="2" Click="Cennik_Click"/>
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>

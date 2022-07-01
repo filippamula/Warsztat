@@ -32,9 +32,9 @@
         </StackPanel>
 
         <StackPanel Margin="717,335,10,0">
-            <Button Content="Dodaj" Height="20" Click="Dodaj_Naprawy"/>
-            <Button Content="Usuń" Height="20" Click="Usun_Naprawy" Margin="0,5,0,0"/>
-            <Button Content="Edytuj" Height="20" Click="Edytuj_Naprawy" Margin="0,5,0,0"/>
+            <Button Style="{DynamicResource ButtonStyle}" Content="Dodaj" Height="20" Click="Dodaj_Naprawy"/>
+            <Button Style="{DynamicResource ButtonStyle}" Content="Usuń" Height="20" Click="Usun_Naprawy" Margin="0,5,0,0"/>
+            <Button Style="{DynamicResource ButtonStyle}" Content="Edytuj" Height="20" Click="Edytuj_Naprawy" Margin="0,5,0,0"/>
 
         </StackPanel>
 
