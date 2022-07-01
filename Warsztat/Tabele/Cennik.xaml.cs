@@ -52,7 +52,7 @@ namespace Warsztat.Tabele
             Odswiez();
         }
 
-        private void Zapisz_Cennik(object sender, RoutedEventArgs e)
+        private void Edytuj_Cennik(object sender, RoutedEventArgs e)
         {
             var selected = CennikTabela.SelectedItem as cennik;
             db.cennik.Remove(selected);

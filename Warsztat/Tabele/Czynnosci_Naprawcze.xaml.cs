@@ -59,5 +59,14 @@ namespace Warsztat.Tabele
             db.SaveChanges();
             Odswiez();
         }
+
+        private void Edytuj_Czynnosci(object sender, RoutedEventArgs e)
+        {
+            var selected = CzynnosciTabela.SelectedItem as czynnosci_naprawcze;
+            db.czynnosci_naprawcze.Remove(selected);
+            Dodaj_Czynnosci(sender, e);
+            db.SaveChanges();
+            Odswiez();
+        }
     }
 }

@@ -23,7 +23,7 @@
         <StackPanel Margin="717,335,10,0">
             <Button Content="Dodaj" Height="20" Click="Dodaj_Cennik"/>
             <Button Content="Usuń" Height="20" Click="Usun_Cennik" Margin="0,5,0,0"/>
-            <Button Content="Edytuj" Height="20" Click="Zapisz_Cennik" Margin="0,5,0,0"/>
+            <Button Content="Edytuj" Height="20" Click="Edytuj_Cennik" Margin="0,5,0,0"/>
 
         </StackPanel>
         
