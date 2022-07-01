@@ -58,8 +58,13 @@ namespace Warsztat.Tabele
         private void Edytuj_Samochody(object sender, RoutedEventArgs e)
         {
             var selected = SamochodyTabela.SelectedItem as samochody;
-            db.samochody.Remove(selected);
-            Dodaj_Samochody(sender, e);
+
+            selected.VIN = VinTB.Text;
+            selected.marka = MarkaTB.Text;
+            selected.model = ModelTB.Text;
+            selected.nr_rejestracji = NRrTB.Text;
+            selected.idKlienta = Convert.ToInt32(IDklientaTB.Text);
+
             db.SaveChanges();
             Odswiez();
         }
