@@ -61,5 +61,14 @@ namespace Warsztat.Tabele
             db.SaveChanges();
             Odswiez();
         }
+
+        private void Edytuj_Naprawy(object sender, RoutedEventArgs e)
+        {
+            var selected = NaprawyTabela.SelectedItem as naprawy;
+            db.naprawy.Remove(selected);
+            Dodaj_Naprawy(sender, e);
+            db.SaveChanges();
+            Odswiez();
+        }
     }
 }
