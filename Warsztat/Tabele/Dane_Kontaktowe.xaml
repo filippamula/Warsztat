@@ -36,7 +36,7 @@
             <TextBox x:Name="KodTB" TextWrapping="Wrap" Width="100" Height="30"  VerticalContentAlignment="Center" FontSize="20"/>
         </StackPanel>
 
-        <StackPanel Margin="717,335,10,10">
+        <StackPanel Margin="717,335,10,0">
             <Button Content="Dodaj" Height="20" Click="Dodaj_Dane_Kontaktowe"/>
             <Button Content="Usuń" Height="20" Click="Usun_Dane_Kontaktowe" Margin="0,5,0,0"/>
             <Button Content="Edytuj" Height="20" Click="Edytuj_Dane_Kontaktowe" Margin="0,5,0,0"/>

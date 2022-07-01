@@ -53,5 +53,14 @@ namespace Warsztat
             db.SaveChanges();
             Odswiez();
         }
+
+        private void Edytuj_Klienci(object sender, RoutedEventArgs e)
+        {
+            var selected = KlienciTabela.SelectedItem as klienci;
+            db.klienci.Remove(selected);
+            Dodaj_Klienci(sender, e);
+            db.SaveChanges();
+            Odswiez();
+        }
     }
 }
