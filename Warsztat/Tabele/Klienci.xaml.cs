@@ -33,6 +33,21 @@ namespace Warsztat
 
         private void Dodaj_Klienci(object sender, RoutedEventArgs e)
         {
+
+            if(ImieTB.Text == "" || NazwiskoTB.Text == "" || PeselTB.Text =="" || ID_DaneKTB.Text == "")
+            {
+                MessageBox.Show("Uzupełnij wszystkie pola tekstowe", "Błąd");
+                return;
+            }
+
+            if (PeselTB.Text.Length != 11)
+            {
+                MessageBox.Show("Podaj poprawny pesel", "Błąd");
+                return;
+            }
+
+            
+
             klienci klienci = new klienci()
             {
                 imie = ImieTB.Text,
@@ -40,6 +55,12 @@ namespace Warsztat
                 PESEL = PeselTB.Text,
                 idDane = Convert.ToInt32(ID_DaneKTB.Text)
             };
+
+            if(db.dane_kontaktowe.Where(d => d.idDane == klienci.idDane).FirstOrDefault() == null)
+            {
+                MessageBox.Show("Podaj istniejące id Dane Kontaktów", "Błąd");
+                return;
+            }
 
             db.klienci.Add(klienci);
             db.SaveChanges();
@@ -49,6 +70,13 @@ namespace Warsztat
         private void Usun_Klienci(object sender, RoutedEventArgs e)
         {
             var selected = KlienciTabela.SelectedItem as klienci;
+
+            if (selected is null)
+            {
+                MessageBox.Show("Zaznacz wiersz", "Błąd");
+                return;
+            }
+
             db.klienci.Remove(selected);
             db.SaveChanges();
             Odswiez();
@@ -58,10 +86,34 @@ namespace Warsztat
         {
             var selected = KlienciTabela.SelectedItem as klienci;
 
+            if(selected is null)
+            {
+                MessageBox.Show("Zaznacz wiersz", "Błąd");
+                return;
+            }
+
+            if (ImieTB.Text == "" || NazwiskoTB.Text == "" || PeselTB.Text == "" || ID_DaneKTB.Text == "")
+            {
+                MessageBox.Show("Uzupełnij wszystkie pola tekstowe", "Błąd");
+                return;
+            }
+
+            if (PeselTB.Text.Length != 11)
+            {
+                MessageBox.Show("Podaj poprawny pesel", "Błąd");
+                return;
+            }
+
             selected.imie = ImieTB.Text;
             selected.nazwisko = NazwiskoTB.Text;
             selected.PESEL = PeselTB.Text;
             selected.idDane = Convert.ToInt32(ID_DaneKTB.Text);
+
+            if (db.dane_kontaktowe.Where(d => d.idDane == selected.idDane).FirstOrDefault() == null)
+            {
+                MessageBox.Show("Podaj istniejące id Dane Kontaktów", "Błąd");
+                return;
+            }
 
             db.SaveChanges();
             Odswiez();
