@@ -46,7 +46,6 @@ namespace Warsztat
                 return;
             }
 
-            
 
             klienci klienci = new klienci()
             {

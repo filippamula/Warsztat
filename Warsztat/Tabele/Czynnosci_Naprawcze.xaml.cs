@@ -39,6 +39,22 @@ namespace Warsztat.Tabele
                 return;
             }
 
+            int idn = Convert.ToInt32(idNaprawyTB.Text);
+            var n = db.naprawy.Where(x => x.idNaprawy == idn).FirstOrDefault();
+            if(n is null)
+            {
+                MessageBox.Show("Podaj poprawne id Naprawy", "Błąd");
+                return;
+            }            
+            
+            int idc = Convert.ToInt32(idNaprawyTB.Text);
+            var c = db.cennik.Where(x => x.idCennik == idn).FirstOrDefault();
+            if(c is null)
+            {
+                MessageBox.Show("Podaj poprawne id Cennik", "Błąd");
+                return;
+            }
+
             decimal? cenaNULLABLE;
             if (CenaTB.Text == "")
                 cenaNULLABLE = null;
