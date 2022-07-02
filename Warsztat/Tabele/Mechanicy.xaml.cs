@@ -50,6 +50,14 @@ namespace Warsztat.Tabele
         private void Usun_Mechanicy(object sender, RoutedEventArgs e)
         {
             var selected = MechanicyTabela.SelectedItem as mechanicy;
+
+
+            if (selected is null)
+            {
+                MessageBox.Show("Zaznacz wiersz", "Błąd");
+                return;
+            }
+
             db.mechanicy.Remove(selected);
             db.SaveChanges();
             Odswiez();
@@ -58,6 +66,13 @@ namespace Warsztat.Tabele
         private void Edytuj_Mechanicy(object sender, RoutedEventArgs e)
         {
             var selected = MechanicyTabela.SelectedItem as mechanicy;
+
+
+            if (selected is null)
+            {
+                MessageBox.Show("Zaznacz wiersz", "Błąd");
+                return;
+            }
 
             selected.imie = ImieTB.Text;
             selected.nazwisko = NazwiskoTB.Text;

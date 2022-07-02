@@ -55,12 +55,6 @@ namespace Warsztat.Tabele
         {
             var selected = CennikTabela.SelectedItem as cennik;
 
-            if(NazwaTB.Text == "" || CenaTB.Text == "")
-            {
-                MessageBox.Show("Uzupełnij wszystkie pola tekstowe", "Błąd");
-                return;
-            }
-
             if (selected is null)
             {
                 MessageBox.Show("Zaznacz wiersz", "Błąd");

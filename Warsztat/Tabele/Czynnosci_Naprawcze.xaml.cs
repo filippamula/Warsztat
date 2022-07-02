@@ -33,6 +33,12 @@ namespace Warsztat.Tabele
 
         private void Dodaj_Czynnosci(object sender, RoutedEventArgs e)
         {
+            if (CenaTB.Text == "" || OpisTB.Text == "" || idNaprawyTB.Text == "" || idCennikTB.Text == "")
+            {
+                MessageBox.Show("Uzupełnij wszystkie pola tekstowe", "Błąd");
+                return;
+            }
+
             decimal? cenaNULLABLE;
             if (CenaTB.Text == "")
                 cenaNULLABLE = null;
@@ -55,6 +61,14 @@ namespace Warsztat.Tabele
         private void Usun_Czynnosci(object sender, RoutedEventArgs e)
         {
             var selected = CzynnosciTabela.SelectedItem as czynnosci_naprawcze;
+
+
+            if (selected is null)
+            {
+                MessageBox.Show("Zaznacz wiersz", "Błąd");
+                return;
+            }
+
             db.czynnosci_naprawcze.Remove(selected);
             db.SaveChanges();
             Odswiez();
@@ -62,7 +76,20 @@ namespace Warsztat.Tabele
 
         private void Edytuj_Czynnosci(object sender, RoutedEventArgs e)
         {
+            if (CenaTB.Text == "" || OpisTB.Text == "" || idNaprawyTB.Text == "" || idCennikTB.Text == "")
+            {
+                MessageBox.Show("Uzupełnij wszystkie pola tekstowe", "Błąd");
+                return;
+            }
+
             var selected = CzynnosciTabela.SelectedItem as czynnosci_naprawcze;
+
+
+            if (selected is null)
+            {
+                MessageBox.Show("Zaznacz wiersz", "Błąd");
+                return;
+            }
 
             decimal? cenaNULLABLE;
             if (CenaTB.Text == "")

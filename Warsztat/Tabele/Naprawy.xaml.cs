@@ -57,6 +57,14 @@ namespace Warsztat.Tabele
         private void Usun_Naprawy(object sender, RoutedEventArgs e)
         {
             var selected = NaprawyTabela.SelectedItem as naprawy;
+
+
+            if (selected is null)
+            {
+                MessageBox.Show("Zaznacz wiersz", "Błąd");
+                return;
+            }
+
             db.naprawy.Remove(selected);
             db.SaveChanges();
             Odswiez();
@@ -65,6 +73,13 @@ namespace Warsztat.Tabele
         private void Edytuj_Naprawy(object sender, RoutedEventArgs e)
         {
             var selected = NaprawyTabela.SelectedItem as naprawy;
+
+
+            if (selected is null)
+            {
+                MessageBox.Show("Zaznacz wiersz", "Błąd");
+                return;
+            }
 
             DateTime? dataWy;
 

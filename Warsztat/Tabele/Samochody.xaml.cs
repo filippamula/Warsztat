@@ -59,6 +59,13 @@ namespace Warsztat.Tabele
         {
             var selected = SamochodyTabela.SelectedItem as samochody;
 
+
+            if (selected is null)
+            {
+                MessageBox.Show("Zaznacz wiersz", "Błąd");
+                return;
+            }
+
             selected.VIN = VinTB.Text;
             selected.marka = MarkaTB.Text;
             selected.model = ModelTB.Text;

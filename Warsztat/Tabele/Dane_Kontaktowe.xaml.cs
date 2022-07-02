@@ -33,6 +33,12 @@ namespace Warsztat.Tabele
 
         private void Dodaj_Dane_Kontaktowe(object sender, RoutedEventArgs e)
         {
+            if (nrTelTB.Text == "" || MiejscowoscTB.Text == "" || UlicaTB.Text == "" || NrTB.Text == "" || KodTB.Text == "")
+            {
+                MessageBox.Show("Uzupełnij wszystkie pola tekstowe", "Błąd");
+                return;
+            }
+
             dane_kontaktowe dane = new dane_kontaktowe()
             {
                 nr_telefonu = nrTelTB.Text,
@@ -50,6 +56,14 @@ namespace Warsztat.Tabele
         private void Usun_Dane_Kontaktowe(object sender, RoutedEventArgs e)
         {
             var selected = DaneTabela.SelectedItem as dane_kontaktowe;
+
+
+            if (selected is null)
+            {
+                MessageBox.Show("Zaznacz wiersz", "Błąd");
+                return;
+            }
+
             db.dane_kontaktowe.Remove(selected);
             db.SaveChanges();
             Odswiez();
@@ -57,7 +71,20 @@ namespace Warsztat.Tabele
 
         private void Edytuj_Dane_Kontaktowe(object sender, RoutedEventArgs e)
         {
+            if (nrTelTB.Text == "" || MiejscowoscTB.Text == "" || UlicaTB.Text == "" || NrTB.Text == "" || KodTB.Text == "")
+            {
+                MessageBox.Show("Uzupełnij wszystkie pola tekstowe", "Błąd");
+                return;
+            }
+
             var selected = DaneTabela.SelectedItem as dane_kontaktowe;
+
+
+            if (selected is null)
+            {
+                MessageBox.Show("Zaznacz wiersz", "Błąd");
+                return;
+            }
 
             selected.nr_telefonu = nrTelTB.Text;
             selected.miejscowosc = MiejscowoscTB.Text;
