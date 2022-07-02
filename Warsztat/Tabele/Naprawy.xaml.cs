@@ -34,6 +34,21 @@ namespace Warsztat.Tabele
         private void Dodaj_Naprawy(object sender, RoutedEventArgs e)
         {
 
+            if (DataPTB.Text == "" || TerminTB.Text == "" || DataWTB.Text == "" || ID_SamochoduTB.Text == "")
+            {
+                MessageBox.Show("Uzupełnij wszystkie pola tekstowe", "Błąd");
+                return;
+            }
+
+            int ids = Convert.ToInt32(ID_SamochoduTB.Text);
+            var s = db.dane_kontaktowe.Where(x => x.idDane == ids).FirstOrDefault();
+            if (s is null)
+            {
+                MessageBox.Show("Podaj poprawne id Samochodu", "Błąd");
+                return;
+            }
+
+
             DateTime? dataWy;
 
             if (DataWTB.Text == "")
