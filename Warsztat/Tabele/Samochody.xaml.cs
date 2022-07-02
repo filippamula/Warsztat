@@ -33,6 +33,20 @@ namespace Warsztat.Tabele
 
         private void Dodaj_Samochody(object sender, RoutedEventArgs e)
         {
+            if (VinTB.Text == "" || MarkaTB.Text == "" || ModelTB.Text == "" || NRrTB.Text == "" || IDklientaTB.Text == "")
+            {
+                MessageBox.Show("Uzupełnij wszystkie pola tekstowe", "Błąd");
+                return;
+            }
+
+            int idk = Convert.ToInt32(IDklientaTB.Text);
+            var k = db.dane_kontaktowe.Where(x => x.idDane == idk).FirstOrDefault();
+            if (k is null)
+            {
+                MessageBox.Show("Podaj poprawne id Klienta", "Błąd");
+                return;
+            }
+
             samochody samochody = new samochody()
             {
                 VIN = VinTB.Text,
