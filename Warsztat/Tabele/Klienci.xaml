@@ -13,22 +13,22 @@
 
         <StackPanel Margin="25,325,625,10">
             <TextBlock TextWrapping="Wrap" Text="Imie" FontSize="15" Height="20" Width="31"/>
-            <TextBox x:Name="ImieTB" TextWrapping="Wrap" Width="130" Height="30" VerticalContentAlignment="Center" FontSize="20"/>
+            <TextBox x:Name="ImieTB" TextWrapping="Wrap" Width="130" Height="30" VerticalContentAlignment="Center" FontSize="20" Text="{Binding SelectedItem.imie, ElementName=KlienciTabela}"/>
         </StackPanel>
 
         <StackPanel Margin="175,325,425,10">
             <TextBlock TextWrapping="Wrap" Text="Nazwisko" FontSize="15" Height="20" Width="65"/>
-            <TextBox x:Name="NazwiskoTB" TextWrapping="Wrap" Width="180" Height="30"  VerticalContentAlignment="Center" FontSize="20"/>
+            <TextBox x:Name="NazwiskoTB" TextWrapping="Wrap" Width="180" Height="30"  VerticalContentAlignment="Center" FontSize="20" Text="{Binding SelectedItem.nazwisko, ElementName=KlienciTabela}"/>
         </StackPanel>
 
         <StackPanel Margin="375,325,285,10">
             <TextBlock TextWrapping="Wrap" Text="PESEL" FontSize="15" Height="20" Width="41"/>
-            <TextBox x:Name="PeselTB" TextWrapping="Wrap" Width="120" Height="30"  VerticalContentAlignment="Center" FontSize="16"/>
+            <TextBox x:Name="PeselTB" TextWrapping="Wrap" Width="120" Height="30"  VerticalContentAlignment="Center" FontSize="16" Text="{Binding SelectedItem.PESEL, ElementName=KlienciTabela}"/>
         </StackPanel>
 
         <StackPanel Margin="508,325,172,10">
             <TextBlock TextWrapping="Wrap" Text="ID Dane Kontaktowe" FontSize="13" Height="20" Width="123"/>
-            <TextBox x:Name="ID_DaneKTB" TextWrapping="Wrap" Width="100" Height="30"  VerticalContentAlignment="Center" FontSize="20"/>
+            <TextBox x:Name="ID_DaneKTB" TextWrapping="Wrap" Width="100" Height="30"  VerticalContentAlignment="Center" FontSize="20" Text="{Binding SelectedItem.idDane, ElementName=KlienciTabela}"/>
         </StackPanel>
 
         <StackPanel Margin="717,335,10,0">

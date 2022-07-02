@@ -13,27 +13,27 @@
 
         <StackPanel Margin="25,325,645,10">
             <TextBlock TextWrapping="Wrap" Text="VIN" FontSize="15" Height="20" Width="29"/>
-            <TextBox x:Name="VinTB" TextWrapping="Wrap" Width="110" Height="30" VerticalContentAlignment="Center" FontSize="20"/>
+            <TextBox x:Name="VinTB" TextWrapping="Wrap" Width="110" Height="30" VerticalContentAlignment="Center" FontSize="20" Text="{Binding SelectedItem.VIN, ElementName=SamochodyTabela}"/>
         </StackPanel>
 
         <StackPanel Margin="155,325,515,10">
             <TextBlock TextWrapping="Wrap" Text="Marka" FontSize="15" Height="20" Width="44"/>
-            <TextBox x:Name="MarkaTB" TextWrapping="Wrap" Width="110" Height="30"  VerticalContentAlignment="Center" FontSize="20"/>
+            <TextBox x:Name="MarkaTB" TextWrapping="Wrap" Width="110" Height="30"  VerticalContentAlignment="Center" FontSize="20" Text="{Binding SelectedItem.marka, ElementName=SamochodyTabela}"/>
         </StackPanel>
 
         <StackPanel Margin="285,325,386,10">
             <TextBlock TextWrapping="Wrap" Text="Model" FontSize="15" Height="20" Width="45"/>
-            <TextBox x:Name="ModelTB" TextWrapping="Wrap" Width="110" Height="30"  VerticalContentAlignment="Center" FontSize="20"/>
+            <TextBox x:Name="ModelTB" TextWrapping="Wrap" Width="110" Height="30"  VerticalContentAlignment="Center" FontSize="20" Text="{Binding SelectedItem.model, ElementName=SamochodyTabela}"/>
         </StackPanel>
 
         <StackPanel Margin="414,325,256,10">
             <TextBlock TextWrapping="Wrap" Text="NR Rejestracji" FontSize="15" Height="20" Width="94"/>
-            <TextBox x:Name="NRrTB" TextWrapping="Wrap" Width="110" Height="30"  VerticalContentAlignment="Center" FontSize="20"/>
+            <TextBox x:Name="NRrTB" TextWrapping="Wrap" Width="110" Height="30"  VerticalContentAlignment="Center" FontSize="20" Text="{Binding SelectedItem.nr_rejestracji, ElementName=SamochodyTabela}"/>
         </StackPanel>
 
         <StackPanel Margin="544,325,136,10">
             <TextBlock TextWrapping="Wrap" Text="ID Klienta" FontSize="15" Height="20" Width="70"/>
-            <TextBox x:Name="IDklientaTB" TextWrapping="Wrap" Width="100" Height="30"  VerticalContentAlignment="Center" FontSize="20"/>
+            <TextBox x:Name="IDklientaTB" TextWrapping="Wrap" Width="100" Height="30"  VerticalContentAlignment="Center" FontSize="20" Text="{Binding SelectedItem.idKlienta, ElementName=SamochodyTabela}"/>
         </StackPanel>
 
         <StackPanel Margin="717,335,10,0">

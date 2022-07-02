@@ -13,27 +13,27 @@
 
         <StackPanel Margin="25,325,645,10">
             <TextBlock TextWrapping="Wrap" Text="Nr Telefonu" FontSize="15" Height="20" Width="83"/>
-            <TextBox x:Name="nrTelTB" TextWrapping="Wrap" Width="110" Height="30" VerticalContentAlignment="Center" FontSize="20"/>
+            <TextBox x:Name="nrTelTB" TextWrapping="Wrap" Width="110" Height="30" VerticalContentAlignment="Center" FontSize="20" Text="{Binding SelectedItem.nr_telefonu, ElementName=DaneTabela}"/>
         </StackPanel>
 
         <StackPanel Margin="155,325,515,10">
             <TextBlock TextWrapping="Wrap" Text="Miejscowość" FontSize="15" Height="20" Width="88"/>
-            <TextBox x:Name="MiejscowoscTB" TextWrapping="Wrap" Width="110" Height="30"  VerticalContentAlignment="Center" FontSize="20"/>
+            <TextBox x:Name="MiejscowoscTB" TextWrapping="Wrap" Width="110" Height="30"  VerticalContentAlignment="Center" FontSize="20" Text="{Binding SelectedItem.miejscowosc, ElementName=DaneTabela}"/>
         </StackPanel>
 
         <StackPanel Margin="285,325,386,10">
             <TextBlock TextWrapping="Wrap" Text="Ulica" FontSize="15" Height="20" Width="35"/>
-            <TextBox x:Name="UlicaTB" TextWrapping="Wrap" Width="110" Height="30"  VerticalContentAlignment="Center" FontSize="20"/>
+            <TextBox x:Name="UlicaTB" TextWrapping="Wrap" Width="110" Height="30"  VerticalContentAlignment="Center" FontSize="20" Text="{Binding SelectedItem.ulica, ElementName=DaneTabela}"/>
         </StackPanel>
 
         <StackPanel Margin="414,325,326,10">
             <TextBlock TextWrapping="Wrap" Text="NR" FontSize="15" Height="20" Width="24"/>
-            <TextBox x:Name="NrTB" TextWrapping="Wrap" Width="40" Height="30"  VerticalContentAlignment="Center" FontSize="20"/>
+            <TextBox x:Name="NrTB" TextWrapping="Wrap" Width="40" Height="30"  VerticalContentAlignment="Center" FontSize="20" Text="{Binding SelectedItem.numer, ElementName=DaneTabela}"/>
         </StackPanel>
 
         <StackPanel Margin="474,325,206,10">
             <TextBlock TextWrapping="Wrap" Text="Kod Pocztowy" FontSize="15" Height="20" Width="95"/>
-            <TextBox x:Name="KodTB" TextWrapping="Wrap" Width="100" Height="30"  VerticalContentAlignment="Center" FontSize="20"/>
+            <TextBox x:Name="KodTB" TextWrapping="Wrap" Width="100" Height="30"  VerticalContentAlignment="Center" FontSize="20" Text="{Binding SelectedItem.kod_pocztowy, ElementName=DaneTabela}"/>
         </StackPanel>
 
         <StackPanel Margin="717,335,10,0">

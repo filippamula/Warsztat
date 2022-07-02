@@ -13,12 +13,12 @@
         
         <StackPanel Margin="25,325,475,10">
             <TextBlock TextWrapping="Wrap" Text="Nazwa" FontSize="15" Height="20" Width="50"/>
-            <TextBox x:Name="NazwaTB" TextWrapping="Wrap" Width="280" Height="30" VerticalContentAlignment="Center" FontSize="20"/>
+            <TextBox x:Name="NazwaTB" TextWrapping="Wrap" Width="280" Height="30" VerticalContentAlignment="Center" FontSize="20" Text="{Binding SelectedItem.nazwa , ElementName=CennikTabela}"/>
         </StackPanel>
 
         <StackPanel Margin="330,325,330,10">
             <TextBlock TextWrapping="Wrap" Text="Cena" FontSize="15" Height="20" Width="35"/>
-            <TextBox x:Name="CenaTB" TextWrapping="Wrap" Width="120" Height="30"  VerticalContentAlignment="Center" FontSize="20"/>
+            <TextBox x:Name="CenaTB" TextWrapping="Wrap" Width="120" Height="30"  VerticalContentAlignment="Center" FontSize="20" Text="{Binding SelectedItem.cena, ElementName=CennikTabela}"/>
         </StackPanel>
 
         <StackPanel Margin="717,335,10,0">

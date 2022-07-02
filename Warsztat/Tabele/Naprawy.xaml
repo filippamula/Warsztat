@@ -13,22 +13,22 @@
 
         <StackPanel Margin="25,325,625,10">
             <TextBlock TextWrapping="Wrap" Text="Data Przyjęcia" FontSize="15" Height="20" Width="97"/>
-            <DatePicker x:Name="DataPTB" Width="130" Height="30" VerticalContentAlignment="Center" FontSize="13"/>
+            <DatePicker x:Name="DataPTB" Width="130" Height="30" VerticalContentAlignment="Center" FontSize="13"  Text="{Binding SelectedItem.data_przyjecia, ElementName=NaprawyTabela}"/>
         </StackPanel>
 
         <StackPanel Margin="175,325,475,10">
             <TextBlock TextWrapping="Wrap" Text="Termin" FontSize="15" Height="20" Width="49"/>
-            <DatePicker x:Name="TerminTB" Width="130" Height="30"  VerticalContentAlignment="Center" FontSize="13"/>
+            <DatePicker x:Name="TerminTB" Width="130" Height="30"  VerticalContentAlignment="Center" FontSize="13" Text="{Binding SelectedItem.termin, ElementName=NaprawyTabela}"/>
         </StackPanel>
 
         <StackPanel Margin="325,325,325,10">
             <TextBlock TextWrapping="Wrap" Text="Data Wydania" FontSize="15" Height="20" Width="96"/>
-            <DatePicker x:Name="DataWTB" Width="120" Height="30"  VerticalContentAlignment="Center" FontSize="13"/>
+            <DatePicker x:Name="DataWTB" Width="120" Height="30"  VerticalContentAlignment="Center" FontSize="13" Text="{Binding SelectedItem.data_wydania, ElementName=NaprawyTabela}"/>
         </StackPanel>
 
         <StackPanel Margin="475,325,205,10">
             <TextBlock TextWrapping="Wrap" Text="ID Samochodu" FontSize="13" Height="20" Width="86"/>
-            <TextBox x:Name="ID_SamochoduTB" TextWrapping="Wrap" Width="100" Height="30"  VerticalContentAlignment="Center" FontSize="20"/>
+            <TextBox x:Name="ID_SamochoduTB" TextWrapping="Wrap" Width="100" Height="30"  VerticalContentAlignment="Center" FontSize="20" Text="{Binding SelectedItem.idSamochodu, ElementName=NaprawyTabela}"/>
         </StackPanel>
 
         <StackPanel Margin="717,335,10,0">
