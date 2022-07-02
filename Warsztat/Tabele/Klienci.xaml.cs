@@ -46,6 +46,13 @@ namespace Warsztat
                 return;
             }
 
+            int idd = Convert.ToInt32(ID_DaneKTB.Text);
+            var n = db.dane_kontaktowe.Where(x => x.idDane == idd).FirstOrDefault();
+            if (n is null)
+            {
+                MessageBox.Show("Podaj poprawne id Danych kontaktowych", "Błąd");
+                return;
+            }
 
             klienci klienci = new klienci()
             {
