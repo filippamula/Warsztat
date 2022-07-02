@@ -33,6 +33,20 @@ namespace Warsztat.Tabele
 
         private void Dodaj_Mechanicy(object sender, RoutedEventArgs e)
         {
+            if (ImieTB.Text == "" || NazwiskoTB.Text == "" || PeselTB.Text == "" || DataTB.Text == "" || ID_DaneKTB.Text == "")
+            {
+                MessageBox.Show("Uzupełnij wszystkie pola tekstowe", "Błąd");
+                return;
+            }
+
+            int idd = Convert.ToInt32(ID_DaneKTB.Text);
+            var n = db.dane_kontaktowe.Where(x => x.idDane == idd).FirstOrDefault();
+            if (n is null)
+            {
+                MessageBox.Show("Podaj poprawne id Danych kontaktowych", "Błąd");
+                return;
+            }
+
             mechanicy mechanicy = new mechanicy()
             {
                 imie = ImieTB.Text,
